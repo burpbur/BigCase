@@ -36,7 +36,11 @@ var weightChart = new Chart(ctx, {
     }
 });
 // ============測驗 btn檢查欄位後到下一題  start=======
+<<<<<<< HEAD
 function validateForm1(event) {
+=======
+function validateForm(event) {
+>>>>>>> 1d4075d81394c024c28746670a08dab17161a044
     event.preventDefault(); // 防止表單提交
     const gender = document.querySelector('input[name="gender"]:checked');
     const birth = document.getElementById('birth').value;
@@ -51,6 +55,7 @@ function validateForm1(event) {
     }
 }
 
+<<<<<<< HEAD
 function validateForm2(event) {
     event.preventDefault(); // 防止表單提交
     const mainGoal = document.getElementById('main-goal').value;
@@ -58,6 +63,15 @@ function validateForm2(event) {
     const goalWeight = document.getElementById('goalWeight').value;
 
     if (mainGoal !== "==請選擇==" && nowWeight && goalWeight) {
+=======
+function validateForm1(event) {
+    event.preventDefault(); // 防止表單提交
+    const mG = document.getElementById('main-goal').value;
+    const nW = document.getElementById('nowWeight').value;
+    const gW = document.getElementById('goalWeight').value;
+
+    if (mG !== "==請選擇==" && nW && gW) {
+>>>>>>> 1d4075d81394c024c28746670a08dab17161a044
         // 所有字段都已填寫，進行下一步
         window.location.href = 'question3.html';
         
@@ -66,6 +80,7 @@ function validateForm2(event) {
         alert('請填寫所有欄位');
     }
 }
+<<<<<<< HEAD
 
 function validateForm3(event) {
     event.preventDefault(); // 防止表單提交
@@ -94,4 +109,6 @@ function validateForm4(event) {
         alert('請填寫所有欄位');
     }
 }
+=======
+>>>>>>> 1d4075d81394c024c28746670a08dab17161a044
 // ============測驗 btn檢查欄位後到下一題  end=======

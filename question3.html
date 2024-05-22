@@ -3,14 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="logNquesStyles.css">
     <title>小測驗3</title>
+=======
+    <title>小測驗3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('../image/pexels-pixabay.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+
+        .container {
+            position: relative;
+            /* left: 300px; */
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 36px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: 50px;
+            background: pink;
+        }
+        .index {
+            position: absolute;
+            top: 15px;
+            left: 200px;
+            width: 80px;
+            height: 50px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bolder;
+            
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: rgb(242, 128, 128);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: rgb(246, 222, 136);
+        }
+        .forgetpwd{
+            text-align: center;
+            font-size: small;
+            margin-top: 20px;
+            
+        }
+        .signin{
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+
+        }
+        .form-label{
+            margin-top: 15px;
+            display: inline;
+        }
+        input[type="checkbox"]{
+            margin: 15px;
+        }
+        
+    </style>
+>>>>>>> 1d4075d81394c024c28746670a08dab17161a044
 </head>
 <body>
     <img src="image/B&B_text.png" class="logo"></img>
     <a href="#" class="index">首頁</a>
     <div class="container">
         <h2>每天喝水情形</h2>
+<<<<<<< HEAD
         <form action="" method="post" enctype="multipart/form-data" autocomplete="off" onsubmit="validateForm3(event)">
             <!-- 1.喝水 -->
                         <input  type="radio" name="ques3" id="water1"><label class="form-label" for="water1">我只喝茶或咖啡</label><br>
@@ -19,6 +131,16 @@
                         <input  type="radio" name="ques3" id="water4"><label class="form-label" for="water4">大約1.5升~2.5升</label><br>
                         <input  type="radio" name="ques3" id="water5"><label class="form-label" for="water5">超過2.5升</label><br>
             <button type="submit" >最後一題</button>
+=======
+        <form action="" method="post" enctype="multipart/form-data" autocomplete="off" onsubmit="validateForm(event)">
+            <!-- 1.喝水 -->
+                        <input  type="checkbox" name="interest[]" id="water1"><label class="form-label" for="water1">我只喝茶或咖啡</label><br>
+                        <input  type="checkbox" name="interest[]" id="water2"><label class="form-label" for="water2">不超過0.5升</label><br>
+                        <input  type="checkbox" name="interest[]" id="water3"><label class="form-label" for="water3">大約0.5升~1.5升</label><br>
+                        <input  type="checkbox" name="interest[]" id="water4"><label class="form-label" for="water4">大約1.5升~2.5升</label><br>
+                        <input  type="checkbox" name="interest[]" id="water5"><label class="form-label" for="water5">超過2.5升</label><br>
+            <button type="button" onclick="window.location.href='question4.html'">最後一題</button>
+>>>>>>> 1d4075d81394c024c28746670a08dab17161a044
         </form>
     </div>
     <script src="./script.js">  </script>
