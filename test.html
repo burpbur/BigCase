@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小測驗</title>
+    
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data" autocomplete="off" onsubmit="validateForm(event)">
+        <!-- 1.性別 -->
+        <label class="form-label" for="gender">性別</label>
+        <input type="radio" name="gender" id="male" checked><label class="contact-label" for="male" style="display: inline;">男性</label>
+        <input type="radio" name="gender" id="female"><label class="contact-label" for="female" style="display: inline;">女性</label>
+        
+        <!-- 2.生日 -->
+        <div class="form-label">
+            <label class="contact-label" for="birth">生日</label>
+            <input type="date" name="birth" id="birth">
+        </div>
+        
+        <!-- 3.身高 -->
+        <div class="form-label">
+            <label class="contact-label" for="height">身高</label>
+            <input type="text" name="height" id="height" placeholder="請輸入身高" required>
+        </div>
+
+        <button type="submit">下一題</button>
+    </form>
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // 防止表單提交
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const birth = document.getElementById('birth').value;
+            const height = document.getElementById('height').value;
+
+            if (gender && birth && height) {
+                // 所有字段都已填寫，進行下一步
+                window.location.href = 'question2.html';
+            } else {
+                // 有字段未填寫，顯示警告信息
+                alert('請填寫所有欄位');
+            }
+        }
+    </script>
+</body>
+</html>

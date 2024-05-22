@@ -105,7 +105,7 @@ body, html {
     /* border-radius: 36px 0px 0px 36px; */
     /* border: white solid 1px; */
     /* background: linear-gradient(to right top, rgb(246, 222, 136) 20%, rgb(246, 222, 136) 80%); */
-    position: fixed;
+    position: absolute;
     right:0;
 }
 

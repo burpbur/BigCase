@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小測驗4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('../image/pexels-pixabay.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+
+        .container {
+            position: relative;
+            /* left: 300px; */
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 36px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: 50px;
+            background: pink;
+        }
+        .index {
+            position: absolute;
+            top: 15px;
+            left: 200px;
+            width: 80px;
+            height: 50px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bolder;
+            
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: rgb(242, 128, 128);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: rgb(246, 222, 136);
+        }
+        .forgetpwd{
+            text-align: center;
+            font-size: small;
+            margin-top: 20px;
+            
+        }
+        .signin{
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+
+        }
+        .form-label{
+            margin-top: 15px;
+            display: inline;
+        }
+        input[type="checkbox"]{
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <img src="image/B&B_text.png" class="logo"></img>
+    <a href="#" class="index">首頁</a>
+    <div class="container">
+        <h2>每周運動量</h2>
+        <form action="" method="post" enctype="multipart/form-data" autocomplete="off" onsubmit="validateForm(event)">
+            <!-- 1.運動量 -->
+            <input  type="checkbox" name="interest[]" id="exercise1"><label class="form-label" for="exercise1">久坐（坐式生活、只有少量走路）</label><br>
+                        <input  type="checkbox" name="interest[]" id="exercise2"><label class="form-label" for="exercise2">輕度活動（每週運動1～3天）</label><br>
+                        <input  type="checkbox" name="interest[]" id="exercise3"><label class="form-label" for="exercise3">中度活動（每週運動3～5天）</label><br>
+                        <input  type="checkbox" name="interest[]" id="exercise4"><label class="form-label" for="exercise4">高度活動（每週運動5～7天）</label><br>
+                        <input  type="checkbox" name="interest[]" id="exercise5"><label class="form-label" for="exercise5">超高度活動（每日均有大量長時間運動）</label><br>
+
+            <button type="button" onclick="window.location.href='signIn.html'">註冊拿自己的健康報表</button>
+        </form>
+    </div>
+    <script src="./script.js">  </script>
+
+</body>
+</html>
