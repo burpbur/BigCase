@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>簽到日歷</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <div class="menu-item hamburger-menu" >
+                <span class="menu-icon" style="font-size: 30px;">☰</span>
+                <a href="#">B&B</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_home.png" style="height: 50px; width: 50px;"><a href="#">首頁</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_profile.png" style="height: 50px; width: 50px;"><a href="#">個人檔案</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_mushrooms.png" style="height: 50px; width: 50px;"><a href="#">健康精靈</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_calendar.png" style="height: 50px; width: 50px;"><a href="#">我的計畫</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_buy.png" style="height: 50px; width: 50px;"><a href="#">健身好物</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="calendar-body">
+            <div class="container">
+                <div class="status">
+                    已簽到 <span id="signedInDays">0</span> 天
+                </div>
+                <div class="calendar-header">
+                    <button id="prevMonth">&lt;</button>
+                    <div id="currentMonth"></div>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+                <div class="calendar" id="calendar">
+                    <div class="day-header">S</div>
+                    <div class="day-header">M</div>
+                    <div class="day-header">T</div>
+                    <div class="day-header">W</div>
+                    <div class="day-header">T</div>
+                    <div class="day-header">F</div>
+                    <div class="day-header">S</div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+            
+            
+            <span class="sidebar">
+                <a href="index.html" class="tooltip-btn" data-tooltip="個人資訊"><img src="image/user-avatar.png" style="height: 50px; width: 50px;"></a>
+                <a href="goal.html" class="tooltip-btn" data-tooltip="健身目標"><img src="image/user-editing.jpg" style="height: 50px; width: 50px;"></a>
+                <a href="bodyreport.html" class="tooltip-btn" data-tooltip="個人健康報表"><img src="image/user-target.jpg" style="height: 50px; width: 50px;"></a>
+                <a href="calendarrecord.html" class="tooltip-btn" data-tooltip="打卡紀錄"><img src="image/user-test(3).jpg" style="height: 50px; width: 50px;"></a>
+            </span>
+    <script src="./calendarjs.js"></script>
+    
+</body>
+
+</html>
