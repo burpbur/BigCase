@@ -12,6 +12,7 @@ body {
     backdrop-filter: blur(5px);
 }
 
+
 .container {
     position: relative;
     /* left: 300px; */
@@ -106,8 +107,6 @@ input[type="radio"]{
 
 /* login & signin container */
 .container-log {
-    position: relative;
-    left: 300px;
     width: 100%;
     max-width: 400px;
     padding: 30px;
@@ -115,4 +114,23 @@ input[type="radio"]{
     border-radius: 36px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    margin-right: 20px; /* 调整右边距 */
+   
+    transform: translateX(70%); /* 调整初始位置，使其不太靠右 */
 }
+/* ===RWD ===Start */
+@media screen and (max-width:768px){
+    body {
+        justify-content: center; /* 使内容在720px以下居中 */
+    }
+
+    .container-log {
+        margin-right: 0; /* 移除右边距 */
+        transform: translateX(0); /* 重置位置 */
+    }
+}
+
+
+
+
+/* ===RWD ===End */

@@ -75,8 +75,6 @@ body, html {
     height: 100vh;
     margin-left: 80px; /* Adjusted to match the navbar's initial width */
     transition: margin-left 0.3s;
-    /* float: left; */
-    /* background-color: red; */
     box-sizing: border-box;
     width: 87%;
 }
@@ -107,6 +105,14 @@ body, html {
 .sidebar a:hover {
     background-color: #ddd;
 }
+.goal-img{
+    margin-left: 150px; 
+    height: 80vh;
+}
+.goal-content{
+    grid-template-columns: repeat(2, 1fr);
+}
+
 
 .content {
     flex-grow: 1;
@@ -206,6 +212,14 @@ select {
 }
 
 /* 日歷========start */
+.cr-main-content {
+    display: inline-table;
+    height: 100vh;
+    margin-left: 80px; /* Adjusted to match the navbar's initial width */
+    transition: margin-left 0.3s;
+    box-sizing: border-box;
+    width: 87%;
+}
 .calendar-body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -301,3 +315,89 @@ select {
     transform: scale(1.02);
 }
 /* 日歷========end */
+/* bodyreport========start */
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+} */
+.rp-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.section p {
+    margin: 5px 0;
+}
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* bodyreport========end */
+
+/* =========RWD====Start */
+@media screen and (max-width:768px){
+    .goal-img{
+        display: none;
+    }
+    .goal-content{
+        grid-template-columns: 1fr;
+    }
+    .rp-container {
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .cr-main-content {
+        margin-left: 13%;
+        width: 80%;
+        
+    }
+    .calendar-body {
+        flex-direction: column;
+        height: 100vh; 
+        justify-content: center; 
+        padding: 10px;
+    }
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+    }
+    .day {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+    .day-header {
+        font-size: 14px;
+    }
+    }
+    
+    
+
+/* =========RWD====End */
+
