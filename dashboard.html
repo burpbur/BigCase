@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>簽到日歷</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .db-main-content {
+            display: flex;
+            flex-wrap: wrap;
+            /* 使用 flex-wrap 來使卡片在空間不足時自動換行 */
+            height: 100vh;
+            margin-left: 100px;
+            /* Adjusted to match the navbar's initial width */
+            transition: margin-left 0.3s;
+            width: calc(100% - 100px);
+            /* Adjusted to match the navbar's initial width */
+        }
+
+        .navbar:hover~.db-main-content,
+        .navbar.expanded~.db-main-content {
+            margin-left: 150px;
+            width: calc(100% - 150px);
+        }
+
+        .left-cards,
+        .right-card {
+            flex: 1;
+            margin: 20px;
+            min-width: calc(33.33% - 40px);
+            /* 保證卡片寬度至少為總寬度的三分之一，並減去 margin */
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background-color: rgb(254, 193, 34);
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .card-content {
+            display: none;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .card-content.show {
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .db-main-content {
+                flex-direction: column;
+                /* 垂直排列卡片 */
+                margin-right: 0;
+                width: 80%;
+            }
+
+            .left-cards,
+            .right-card {
+                width: 100%;
+            }
+
+            .right-card {
+                order: -1;
+                /* 保證右邊的卡片在左邊卡片下面 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <div class="menu-item hamburger-menu">
+                <span class="menu-icon" style="font-size: 30px;">☰</span>
+                <a href="#">B&B</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_home.png" style="height: 50px; width: 50px;"><a href="#">首頁</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_profile.png" style="height: 50px; width: 50px;"><a href="#">個人檔案</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_mushrooms.png" style="height: 50px; width: 50px;"><a href="#">健康精靈</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_calendar.png" style="height: 50px; width: 50px;"><a href="#">我的計畫</a>
+            </div>
+            <div class="menu-item">
+                <img src="image/nav_buy.png" style="height: 50px; width: 50px;"><a href="#">健身好物</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="db-main-content">
+        <div class="left-cards">
+            <div class="card">
+                <div class="card-header">我的計畫</div>
+                <div class="card-content">
+                    <!-- 自行修改的內容 -->
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">健康精靈</div>
+                <div class="card-content">
+                    <!-- 自行修改的內容 -->
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">會員資料</div>
+                <div class="card-content">
+                    <!-- 自行修改的內容 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="right-card">
+            <div class="card">
+                <div class="card-header">簽到日歷</div>
+                <div class="card-content show">
+                    <div class="db-calendar-body">
+                        <div class="db-container">
+                            <div class="status">
+                                已簽到 <span id="signedInDays">0</span> 天
+                            </div>
+                            <div class="calendar-header">
+                                <button id="prevMonth">&lt;</button>
+                                <div id="currentMonth"></div>
+                                <button id="nextMonth">&gt;</button>
+                            </div>
+                            <div class="calendar" id="calendar">
+                                <div class="day-header">S</div>
+                                <div class="day-header">M</div>
+                                <div class="day-header">T</div>
+                                <div class="day-header">W</div>
+                                <div class="day-header">T</div>
+                                <div class="day-header">F</div>
+                                <div class="day-header">S</div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="extra-content">
+                            <label class="contact-label" for="currentWeight">目前體重: </label>
+                            <input type="text" name="currentWeight" id="currentWeight" placeholder="量一下吧!" required>
+                            <button type="submit">儲存</button>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.card-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('show');
+            });
+        });
+    </script>
+    <script src="./db_calendar.js"></script>
+</body>
+
+</html>

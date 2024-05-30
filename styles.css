@@ -229,9 +229,29 @@ select {
     margin: 0;
     /* width: 100%; */
 }
+.db-calendar-body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 0;
+    width: 100%;
+  
+}
+
+.db-container {
+    text-align: center;
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+}
+
 .container {
     text-align: center;
-    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -260,6 +280,7 @@ select {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
+    max-width: 100%;
 }
 
 .day-header {
@@ -277,6 +298,7 @@ select {
     border: 2px solid transparent;
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 .day.past {
     color: #e74c3c;
@@ -314,6 +336,56 @@ select {
     box-shadow:rgba(50,50,93,0.25) 0px 2px 0px -1px,rgba(0,0,0,0.3) 0px 3px 3px -1px ;
     transform: scale(1.02);
 }
+/* =================db-calendar */
+.db-day {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 35px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+.db-day.past {
+    color: #e74c3c;
+    border-color: #e74c3c;
+    box-shadow: 5px 3px 2px rgb(74, 74, 74)
+}
+
+.db-day.not-signed {
+    color: #e74c3c;
+    border-color: #e74c3c;
+    box-shadow: 5px 3px 2px rgb(74, 74, 74)
+
+}
+
+.db-day.signed {
+    color: #27ae60;
+    border-color: #27ae60;
+    box-shadow: 5px 3px 2px rgb(74, 74, 74)
+
+}
+
+.db-day.future {
+    color: #bdc3c7;
+    border-color: #bdc3c7;
+    box-shadow: 5px 3px 2px rgb(74, 74, 74)
+
+}
+
+.db-day:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 3px 2px rgb(74, 74, 74)
+
+}
+.db-day:hover{
+    box-shadow:rgba(50,50,93,0.25) 0px 2px 0px -1px,rgba(0,0,0,0.3) 0px 3px 3px -1px ;
+    transform: scale(1.02);
+}
+/* =================db-calendar */
+
 /* 日歷========end */
 /* bodyreport========start */
 /* body {
